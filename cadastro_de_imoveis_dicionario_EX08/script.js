@@ -17,12 +17,22 @@ do {
             let qtd_banheiros = parseInt(prompt("Quantos banheiros possui o imóvel ?"))
             let garagem = prompt("O imóvel possui garagem ? [SIM/NÃO] ")
 
-            imoveis.push({
+            let confirmacao = confirm(
+                "Realmente deseja salvar esse imovel ?\n" +
+                "Nome do proprietario: " + nome + "\n" +
+                "Quantidade de quartos: " + qtd_quarto + "\n" +
+                "Quantidade de banheiros: " + qtd_banheiros + "\n" +
+                "Possui garagem ?: " + garagem + "\n" 
+            )
+
+            if(confirmacao === true){
+                imoveis.push({
                 nome: nome,
                 quantidade_de_quartos: qtd_quarto,
                 quantidade_de_banheiros: qtd_banheiros,
                 possui_garagem: garagem
             })
+            }
             break
 
         case 2:
