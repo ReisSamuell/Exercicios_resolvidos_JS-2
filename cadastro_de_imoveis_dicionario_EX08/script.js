@@ -30,15 +30,27 @@ do {
                 alert("Nenhum imóvel cadastrado.")
                 break
             }
-
+            // podemos resolver dessa forma 
+            /*
             for (let i = 0; i < imoveis.length; i++) {
                 const imovel = imoveis[i]
                 let mensagem = "Imovel: " + (i + 1) + "\n" 
-                for (const [chave, valor] of Object.entries(imovel)) {
+                for (const [chave, valor] of Object.entries(imovel)) { // cria uma const, que vai receber (chave, valor) de cada item do dicionario que esta na posição "i" do array "imoveis"
                     mensagem += chave + " " + valor + "\n"
                 }
 
                 alert(mensagem)
+            }
+            */
+            // e podemos resolver dessa forma
+            
+            for (let i = 0; i < imoveis.length; i++){
+                alert(
+                    "Imovel " + (i + 1) +
+                    "\nProprietario: " + imoveis[i].nome +
+                    "\nQuartos: " + imoveis[i].quantidade_de_quartos +
+                    "\nBanheiros: " + imoveis[i].quantidade_de_banheiros + 
+                    "\nPossui Garagem: " + imoveis[i].possui_garagem)
             }
             break
 
